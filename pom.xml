@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ryaltech</groupId>
+	<artifactId>mvn-release-nirvana</artifactId>
+	<version>${revision}</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>mvn-release-nirvana-m1</module>
+		<module>mvn-release-nirvana-m2</module>
+	</modules>
+	<properties>
+		<revision>0.0.1-SNAPSHOT</revision>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>central</name>
+			<url>${distributionManagement.repository.releases.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>central</id>
+			<name>snapshot</name>
+			<url>${distributionManagement.repository.snapshots.url}</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
